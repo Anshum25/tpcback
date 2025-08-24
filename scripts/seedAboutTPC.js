@@ -6,7 +6,7 @@ const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/tpc';
 
 const aboutTPC = {
   title: 'About TPC',
-  value: `The Turning Point Community (TPC) stands as Gujarat's largest and most dynamic student-run society, dedicated to empowering youth through intellectually enriching platforms.\n\nWe organize diverse events including high-stakes debate competitions, MUNited Nations (MUNs), state-level Speaker Sessions, and skill-building workshops that bring together over 10,000 students.`
+  value: `The Turning Point Community (TPC) stands as India's largest and most dynamic student-run society, dedicated to empowering youth through intellectually enriching platforms.\n\nWe organize diverse events including high-stakes debate competitions, MUNited Nations (MUNs), state-level Speaker Sessions, and skill-building workshops that bring together over 10,000 students.`
 };
 
 async function seed() {

@@ -7,12 +7,12 @@ const team = [
   {
     name: "Aditya Bhatt",
     position: "President & Founder",
-    description: "Empowering Gujarat's youth through leadership and debate.",
+    description: "Empowering India's youth through leadership and debate.",
   },
   {
     name: "Kavya Chokshi",
     position: "Vice President",
-    description: "Oversees events and operations across Gujarat.",
+    description: "Oversees events and operations across India.",
   },
   {
     name: "Dev Babani",

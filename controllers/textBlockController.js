@@ -1,13 +1,20 @@
 const TextBlock = require("../models/TextBlock");
 
 exports.getAllTextBlocks = async (req, res) => {
-  console.log("Fetching text blocks...");
+  const start = Date.now();
+  console.log("[PERF] Start fetching text blocks at", new Date(start).toISOString());
   try {
+    const dbStart = Date.now();
     const blocks = await TextBlock.find();
-    console.log("Fetched blocks:", blocks);
+    const dbEnd = Date.now();
+    console.log(`[PERF] DB query for text blocks took ${dbEnd - dbStart} ms`);
     res.json(blocks);
+    const end = Date.now();
+    console.log(`[PERF] Total getAllTextBlocks time: ${end - start} ms`);
   } catch (error) {
+    const errEnd = Date.now();
     console.error("Error fetching text blocks:", error);
+    console.log(`[PERF] getAllTextBlocks failed after ${errEnd - start} ms`);
     res
       .status(500)
       .json({ message: "Failed to fetch text blocks", error: error.message });
